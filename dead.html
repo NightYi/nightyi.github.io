@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+<title>Game</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <title>Dead by Daylight</title>
-</head>
 <style>
     li {
         display: inline;
@@ -20,20 +19,13 @@
         text-align: center;
     }
     
-    a:link {
-        color: aliceblue;
-    }
-    
-    a:visited {
-        color: aliceblue;
-    }
-    
     body {
-        background-image: url(THB-Killers.jpg);
+        background-image: url(/img/THB-Killers.jpg);
         color: aliceblue;
     }
     
-    p {
+    p,
+    img {
         text-align: center;
     }
     
@@ -50,31 +42,47 @@
     }
 </style>
 
+
+
 <body>
-    <div class="head text-right ">
 
-        <ul class="col-sm-12">
-            <a href="main.html">
-                <li class="col-sm-6">Night Yi</li>
-            </a>
-            <a href="game.html">
-                <li> 遊戲GAME | </li>
-            </a>
-            <a href="mine.html">
-                <li> Minecraft | </li>
-            </a>
-            <a href="陰陽師.html">
-                <li> 陰陽師Onmyoji</li>
-            </a>
-        </ul>
+    <!-- Side Navigation -->
+    <nav class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-center" style="display:none" id="mySidebar">
+        <button class="w3-bar-item w3-button" onclick="w3_close()">Close <i class="fa fa-remove"></i></button>
+        <a href="index.html" class="w3-bar-item w3-button">Night Yi</a>
+        <a href="game.html" class="w3-bar-item w3-button"> 遊戲GAME</a>
+        <a href="mine.html" class="w3-bar-item w3-button">Minecraft</a>
+        <a href="陰陽師.html" class="w3-bar-item w3-button">陰陽師Onmyoji</a>
+    </nav>
 
+    <!-- Header -->
+    <header class="w3-container w3-theme w3-padding" id="myHeader">
+        <i onclick="w3_open()" class="fa fa-bars w3-xlarge w3-button w3-theme"></i>
+        <div class="w3-center">
+            <h1>Dead by Daylight</h1>
+            <h4>這是一款非對稱式的鬼抓人遊戲，<br> 遊戲目的是4位倖存者修好5台發電機，並開啟大門逃脫的遊戲，
+                <br> 在遊戲進行時會有1位殺手，來殺掉倖存者。</h4>
+
+        </div>
+    </header>
+
+    <!-- Modal -->
+    <div id="id01" class="w3-modal">
+        <div class="w3-modal-content w3-card-4 w3-animate-top">
+            <header class="w3-container w3-theme-l1">
+                <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">×</span>
+                <h4>Oh snap! We just showed you a modal..</h4>
+                <h5>Because we can <i class="fa fa-smile-o"></i></h5>
+            </header>
+            <div class="w3-padding">
+                <p>Cool huh? Ok, enough teasing around..</p>
+                <p>Go to our <a class="w3-btn" href="/w3css/default.asp">W3.CSS Tutorial</a> to learn more!</p>
+            </div>
+            <footer class="w3-container w3-theme-l1">
+                <p>Modal footer</p>
+            </footer>
+        </div>
     </div>
-
-
-    <h1>Dead by Daylight</h1>
-    <p>這是一款非對稱式的鬼抓人遊戲，<br> 遊戲目的是4位倖存者修好5台發電機，並開啟大門逃脫的遊戲，
-        <br> 在遊戲進行時會有1位殺手，來殺掉倖存者。
-    </p>
 
     <div class="container">
         <div class="row">
@@ -92,243 +100,274 @@
 
             </div>
         </div>
-        <p>接下來為鬼(殺手)的簡單介紹</p>
+        <h1>接下來為鬼(殺手)的簡單介紹</h1>
 
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-3 col-12">
-                    <img src="下載.jpg">
+        <div class="w3-row ">
+            <div class="w3-quarter w3-container ">
+                <img src="/img/下載.jpg">
+
+            </div>
+            <div class="w3-quarter w3-container">
+                <p>陷阱殺手伊凡.麥克米蘭</p>
+                <p>又稱:夾子鬼</p>
+                <p>殺手能力：捕獸夾</p>
+
+            </div>
+            <div class="w3-quarter w3-container">
+                <img src="/img/images.jpg">
+            </div>
+            <div class="w3-quarter w3-container">
+                <p>幽靈殺手飛利浦.歐鳩摩</p>
+                <p>又稱:隱鬼</p>
+                <p>殺手能力：骷髏喪鐘</p>
+            </div>
+        </div>
 
 
-                </div>
-                <div class="col-sm-3 col-12" id="gost">
-                    <p>陷阱殺手伊凡.麥克米蘭</p>
-                    <p>又稱:夾子鬼</p>
-                    <p>殺手能力：捕獸夾</p>
+        <div class="w3-row ">
+            <div class="w3-quarter w3-container ">
+                <img src="/img/下載 (5).jpg">
+
+            </div>
+            <div class="w3-quarter w3-container">
+                <p>護士莎莉史密森</p>
+                <p>又稱:護士姊姊</p>
+                <p>殺手能力：鬼影步</p>
+
+            </div>
+            <div class="w3-quarter w3-container">
+                <img src="/img/下載 (7).jpg">
+            </div>
+            <div class="w3-quarter w3-container">
+                <p>鄉巴佬電鋸殺手麥克斯.湯普森二世</p>
+                <p>又稱:電鋸鬼</p>
+                <p>殺手能力：電鋸</p>
+            </div>
+        </div>
+
+        <div class="w3-row ">
+            <div class="w3-quarter w3-container ">
+                <img src="/img/下載 (8).jpg">
+
+            </div>
+            <div class="w3-quarter w3-container">
+                <p>殺人鬼麥克.邁爾斯</p>
+                <p>又稱:邁爾斯</p>
+                <p>殺手能力：惡魔附身 </p>
+
+            </div>
+            <div class="w3-quarter w3-container">
+                <img src="/img/下載 (1).jpg">
+            </div>
+            <div class="w3-quarter w3-container">
+                <p>妖巫麗莎.雪伍德</p>
+                <p>又稱:妖婆</p>
+                <p>殺手能力：鬼靈陷阱</p>
+            </div>
+        </div>
+
+        <div class="w3-row ">
+            <div class="w3-quarter w3-container ">
+                <img src="/img/下載 (6).jpg">
+
+            </div>
+            <div class="w3-quarter w3-container">
+                <p>女獵人安娜</p>
+                <p>又稱:兔兔、兔女</p>
+                <p>殺手能力：狩獵飛斧 </p>
+
+            </div>
+            <div class="w3-quarter w3-container">
+                <img src="/img/下載 (2).jpg">
+            </div>
+            <div class="w3-quarter w3-container">
+                <p>食人魔布巴·索耶</p>
+                <p>又稱:皮臉</p>
+                <p>殺手能力：布巴的電鋸</p>
+            </div>
+        </div>
 
 
+        <div class="w3-row ">
+            <div class="w3-quarter w3-container ">
+                <img src="/img/下載 (4).jpg">
 
-                </div>
-                <div class="col-sm-3 col-12">
-                    <img src="images.jpg">
+            </div>
+            <div class="w3-quarter w3-container">
+                <p>醫生赫曼˙卡爾特</p>
+                <p>(參考真實人物"楊永信")</p>
+                <p>又稱:醫生</p>
+                <p>殺手能力：卡特醫生的電火花 </p>
+            </div>
+            <div class="w3-quarter w3-container">
+                <img src="/img/images (1).jpg">
+            </div>
+            <div class="w3-quarter w3-container">
+                <p>夢魘弗萊迪·克魯格</p>
+                <p>(來自電影 "半夜鬼上床")</p>
+                <p>又稱:佛萊迪</p>
+                <p>殺手能力：夢魔</p>
+            </div>
+        </div>
 
-                </div>
-                <div class="col-sm-3 col-12" id="gost">
-                    <p>幽靈殺手飛利浦.歐鳩摩</p>
-                    <p>又稱:隱鬼</p>
-                    <p>殺手能力：骷髏喪鐘</p>
+        <div class="w3-row ">
+            <div class="w3-quarter w3-container ">
+                <img src="/img/下載 (10).jpg">
 
-                </div>
+            </div>
+            <div class="w3-quarter w3-container">
+                <p>門徒亞曼達·楊 Amanda Young</p>
+                <p>(來自電影 "奪魂鋸")</p>
+                <p>又稱:門徒、豬女 </p>
+                <p>殺手能力：堅拒的洗禮 </p>
+
+            </div>
+            <div class="w3-quarter w3-container">
+                <img src="/img/下載 (3).jpg">
+            </div>
+            <div class="w3-quarter w3-container">
+                <p>小丑肯尼斯"傑佛瑞·霍克"</p>
+                <p>又稱:小丑</p>
+                <p>殺手能力：精煉毒酒</p>
+            </div>
+        </div>
+
+        <div class="w3-row ">
+            <div class="w3-quarter w3-container ">
+                <img src="/img/images (3).jpg">
+
+            </div>
+            <div class="w3-quarter w3-container">
+                <p>怨靈山岡凜</p>
+                <p>又稱:怨靈</p>
+                <p>殺手能力：山崗家族的作祟 </p>
+
+            </div>
+            <div class="w3-quarter w3-container">
+                <img src="/img/images (2).jpg">
+            </div>
+            <div class="w3-quarter w3-container">
+                <p>軍團：弗蘭克˙莫里森、朱莉、蘇西、喬伊</p>
+                <p>又稱:軍團</p>
+                <p>殺手能力：野性狂暴</p>
+            </div>
+        </div>
+
+        <div class="w3-row ">
+            <div class="w3-quarter w3-container ">
+                <img src="/img/下載 (9).jpg">
+
+            </div>
+            <div class="w3-quarter w3-container">
+                <p>瘟疫阿迪里斯</p>
+                <p>又稱:瘟疫</p>
+                <p>殺手能力：肮髒傾瀉 </p>
+
+            </div>
+            <div class="w3-quarter w3-container">
+            </div>
+            <div class="w3-quarter w3-container">
+                <p>由於倖存者眾多，因此僅簡單介紹殺手。</p>
+                <p>遊戲中的樂趣，推薦可以去看影片喔! OWO</p>
             </div>
         </div>
 
 
 
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-3 col-12">
-                    <img src="下載 (5).jpg">
-
-                </div>
-                <div class="col-sm-3 col-12" id="gost">
-                    <p>護士莎莉史密森</p>
-                    <p>又稱:護士姊姊</p>
-                    <p>殺手能力：鬼影步</p>
-
-                </div>
-
-                <div class="col-sm-3 col-12">
-                    <img src="下載 (7).jpg">
-
-                </div>
-                <div class="col-sm-3" id="gost">
-                    <p>鄉巴佬電鋸殺手麥克斯.湯普森二世</p>
-                    <p>又稱:電鋸鬼</p>
-                    <p>殺手能力：電鋸</p>
-
-                </div>
+        <!-- Footer -->
+        <footer class="w3-container w3-theme-dark w3-padding-16">
+            <p></p>
+            <div style="position:relative;bottom:55px;" class="w3-tooltip w3-right">
+                <span class="w3-text w3-theme-light w3-padding">Go To Top</span>
+                <a class="w3-text-white" href="#myHeader"><span class="w3-xlarge">
+    <i class="fa fa-chevron-circle-up"></i></span></a>
             </div>
-        </div>
+        </footer>
 
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-3 col-12">
-                    <img src="下載 (8).jpg">
+        <!-- Script for Sidebar, Tabs, Accordions, Progress bars and slideshows -->
+        <script>
+            // Side navigation
+            function w3_open() {
+                var x = document.getElementById("mySidebar");
+                x.style.width = "100%";
+                x.style.fontSize = "40px";
+                x.style.paddingTop = "10%";
+                x.style.display = "block";
+            }
 
+            function w3_close() {
+                document.getElementById("mySidebar").style.display = "none";
+            }
 
-                </div>
-                <div class="col-sm-3 col-12" id="gost">
-                    <p>殺人鬼麥克.邁爾斯</p>
-                    <p>又稱:邁爾斯</p>
-                    <p>殺手能力：惡魔附身 </p>
+            // Tabs
+            function openCity(evt, cityName) {
+                var i;
+                var x = document.getElementsByClassName("city");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                var activebtn = document.getElementsByClassName("testbtn");
+                for (i = 0; i < x.length; i++) {
+                    activebtn[i].className = activebtn[i].className.replace(" w3-dark-grey", "");
+                }
+                document.getElementById(cityName).style.display = "block";
+                evt.currentTarget.className += " w3-dark-grey";
+            }
 
-                </div>
-                <div class="col-sm-3 col-12">
-                    <img src="下載 (1).jpg">
+            var mybtn = document.getElementsByClassName("testbtn")[0];
+            mybtn.click();
 
+            // Accordions
+            function myAccFunc(id) {
+                var x = document.getElementById(id);
+                if (x.className.indexOf("w3-show") == -1) {
+                    x.className += " w3-show";
+                } else {
+                    x.className = x.className.replace(" w3-show", "");
+                }
+            }
 
-                </div>
-                <div class="col-sm-3 col-12" id="gost">
-                    <p>妖巫麗莎.雪伍德</p>
-                    <p>又稱:妖婆</p>
-                    <p>殺手能力：鬼靈陷阱</p>
+            // Slideshows
+            var slideIndex = 1;
 
-                </div>
-            </div>
-        </div>
+            function plusDivs(n) {
+                slideIndex = slideIndex + n;
+                showDivs(slideIndex);
+            }
 
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-3 col-12">
-                    <img src="下載 (6).jpg">
+            function showDivs(n) {
+                var x = document.getElementsByClassName("mySlides");
+                if (n > x.length) {
+                    slideIndex = 1
+                }
+                if (n < 1) {
+                    slideIndex = x.length
+                };
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                x[slideIndex - 1].style.display = "block";
+            }
 
+            showDivs(1);
 
-                </div>
-                <div class="col-sm-3 col-12" id="gost">
-                    <p>女獵人安娜</p>
-                    <p>又稱:兔兔、兔女</p>
-                    <p>殺手能力：狩獵飛斧 </p>
+            // Progress Bars
+            function move() {
+                var elem = document.getElementById("myBar");
+                var width = 5;
+                var id = setInterval(frame, 10);
 
-                </div>
-                <div class="col-sm-3 col-12">
-                    <img src="下載 (2).jpg">
-
-
-                </div>
-                <div class="col-sm-3 col-12" id="gost">
-                    <p>食人魔布巴·索耶</p>
-                    <p>又稱:皮臉</p>
-                    <p>殺手能力：布巴的電鋸</p>
-
-                </div>
-            </div>
-        </div>
-
-
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-3 col-12">
-                    <img src="下載 (4).jpg">
-
-
-                </div>
-                <div class="col-sm-3 col-12" id="gost">
-                    <p>醫生赫曼˙卡爾特</p>
-                    <p>(參考真實人物"楊永信")</p>
-                    <p>又稱:醫生</p>
-                    <p>殺手能力：卡特醫生的電火花 </p>
-
-                </div>
-                <div class="col-sm-3 col-12">
-                    <img src="images (1).jpg">
-
-
-                </div>
-                <div class="col-sm-3 col-12" id="gost">
-                    <p>夢魘弗萊迪·克魯格</p>
-                    <p>(來自電影 "半夜鬼上床")</p>
-                    <p>又稱:佛萊迪</p>
-                    <p>殺手能力：夢魔</p>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-3 col-12">
-                    <img src="下載 (10).jpg">
-
-
-                </div>
-                <div class="col-sm-3 col-12" id="gost">
-                    <p>門徒亞曼達·楊 Amanda Young</p>
-                    <p>(來自電影 "奪魂鋸")</p>
-                    <p>又稱:門徒、豬女 </p>
-                    <p>殺手能力：堅拒的洗禮 </p>
-
-                </div>
-                <div class="col-sm-3 col-12">
-                    <img src="下載 (3).jpg">
-
-
-                </div>
-                <div class="col-sm-3 col-12" id="gost">
-                    <p>小丑肯尼斯"傑佛瑞·霍克"</p>
-                    <p>又稱:小丑</p>
-                    <p>殺手能力：精煉毒酒</p>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-3 col-12">
-                    <img src="images (3).jpg">
-
-
-                </div>
-                <div class="col-sm-3 col-12" id="gost">
-                    <p>怨靈山岡凜</p>
-                    <p>又稱:怨靈</p>
-                    <p>殺手能力：山崗家族的作祟 </p>
-
-                </div>
-                <div class="col-sm-3 col-12">
-                    <img src="images (2).jpg">
-
-
-                </div>
-                <div class="col-sm-3 col-12" id="gost">
-                    <p>軍團：弗蘭克˙莫里森、朱莉、蘇西、喬伊</p>
-                    <p>又稱:軍團</p>
-                    <p>殺手能力：野性狂暴</p>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-3 col-12">
-                    <img src="下載 (9).jpg">
-
-
-                </div>
-                <div class="col-sm-3 col-12" id="gost">
-                    <p>瘟疫阿迪里斯</p>
-                    <p>又稱:瘟疫</p>
-                    <p>殺手能力：肮髒傾瀉 </p>
-
-                </div>
-                <div class="col-sm-6 col-12">
-                    <p>由於倖存者眾多，因此僅簡單介紹殺手。</p>
-                    <p>遊戲中的樂趣，推薦可以去看影片喔! OWO</p>
-                </div>
-            </div>
-        </div>
-
-
-
-
-
-
-
-
-
-    </div>
-
-
-
-
-
-
-
-
-
-
-
+                function frame() {
+                    if (width == 100) {
+                        clearInterval(id);
+                    } else {
+                        width++;
+                        elem.style.width = width + '%';
+                        elem.innerHTML = width * 1 + '%';
+                    }
+                }
+            }
+        </script>
 
 </body>
 
