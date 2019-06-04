@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+<title>陰陽師Onmyoji</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <title>陰陽師Onmyoji</title>
-</head>
 <style>
     li {
         display: inline;
@@ -21,16 +20,12 @@
         color: aliceblue;
     }
     
-    a:link {
-        color: aliceblue;
-    }
-    
-    a:visited {
+    h4 {
         color: aliceblue;
     }
     
     body {
-        background-image: url("3e04eb391d2984c27229a5bf86d15186.jpg")
+        background-image: url("/img/3e04eb391d2984c27229a5bf86d15186.jpg")
     }
     
     p {
@@ -48,107 +43,213 @@
     }
 </style>
 
+
+
 <body>
-    <div class="head text-right ">
 
-        <ul class="col-md-12">
-            <a href="main.html">
-                <li class="col-md-6">Night Yi</li>
-            </a>
-            <a href="dead.html">
-                <li> Dead by Daylight | </li>
-            </a>
-            <a href="mine.html">
-                <li> Minecraft | </li>
-            </a>
-            <a href="game.html">
-                <li> 遊戲GAME </li>
-            </a>
-        </ul>
+    <!-- Side Navigation -->
+    <nav class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-center" style="display:none" id="mySidebar">
+        <button class="w3-bar-item w3-button" onclick="w3_close()">Close <i class="fa fa-remove"></i></button>
+        <a href="index.html" class="w3-bar-item w3-button">Night Yi</a>
+        <a href="dead.html" class="w3-bar-item w3-button"> Dead by Daylight</a>
+        <a href="mine.html" class="w3-bar-item w3-button">Minecraft</a>
+        <a href="game.html" class="w3-bar-item w3-button">遊戲GAME</a>
+    </nav>
 
-    </div>
+    <!-- Header -->
+    <header class="w3-container w3-theme w3-padding" id="myHeader">
+        <i onclick="w3_open()" class="fa fa-bars w3-xlarge w3-button w3-theme"></i>
+        <div class="w3-center">
+            <h1>陰陽師Onmyoji</h1>
+            <h4 class="me">為我目前玩得較認真的手遊，真的是用肝去玩XDDD</h4>
+        </div>
+    </header>
 
-    <h1>陰陽師Onmyoji</h1>
-    <p class="me">此為我目前玩得較認真的手遊，真的是用肝去玩XDDD</p>
-
-    <p>遊戲內容：</p>
-    <p>在日本平安時代，原本應在陰界的妖怪們現身人間，並製造各種騷亂為禍人間。<br>而在世上有一類被稱為「陰陽師」的異能者，他們能驅符念咒，役使妖，收之為「式神」供己差遣。 <br>陰陽師們利用自身能力，維持著陰陽兩界的平衡。
-
-    </p>
-    <P>四大陰陽師介紹:</P>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-6 col-12">
-                <img src="15073347_389583958098825_3164789497440218099_n.jpg">
+    <!-- Modal -->
+    <div id="id01" class="w3-modal">
+        <div class="w3-modal-content w3-card-4 w3-animate-top">
+            <header class="w3-container w3-theme-l1">
+                <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">×</span>
+                <h4>Oh snap! We just showed you a modal..</h4>
+                <h5>Because we can <i class="fa fa-smile-o"></i></h5>
+            </header>
+            <div class="w3-padding">
+                <p>Cool huh? Ok, enough teasing around..</p>
+                <p>Go to our <a class="w3-btn" href="/w3css/default.asp">W3.CSS Tutorial</a> to learn more!</p>
             </div>
-            <div class="col-sm-6 col-12">
-                <p class="ma">
-                    【陰陽師四大主角介紹——安倍晴明】<br> 作為平安時代陰陽師中的佼佼者，
-                    <br> 天賦異稟的安倍晴明與眾多強力式神締結了契約。
-                    <br> 然而現在的他似乎丟失了過去的記憶，
-                    <br> 即便如此，他依然用心守護著眼前的人們和他的都城。
-                    <br>
-                </p>
-            </div>
-
+            <footer class="w3-container w3-theme-l1">
+                <p>Modal footer</p>
+            </footer>
         </div>
     </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-6 col-12">
-                <img src="15094233_389702681420286_8208973383465953030_n.jpg">
-            </div>
-            <div class="col-sm-6 col-12">
-                <p class="ma">
-                    【陰陽師四大主角介紹——神樂】<br> 善良而沉默的神秘少女，
-                    <br> 失去記憶後便跟隨在晴明身邊。
-                    <br> 擁有敏銳的直覺和強大的通靈能力，
-                    <br> 還有不為人知的過去。
-                    <br>
-                </p>
+    <h4>遊戲內容：</h4>
+    <h4>在日本平安時代，原本應在陰界的妖怪們現身人間，並製造各種騷亂為禍人間。<br>而在世上有一類被稱為「陰陽師」的異能者，他們能驅符念咒，役使妖，收之為「式神」供己差遣。 <br>陰陽師們利用自身能力，維持著陰陽兩界的平衡。
 
-            </div>
+    </h4>
+    <h4>四大陰陽師介紹:</h4>
 
+    <div class="w3-row ">
+        <div class="w3-half w3-container  ">
+            <img src="/img/15073347_389583958098825_3164789497440218099_n.jpg">
+        </div>
+        <div class="w3-half w3-container">
+            <h4 class="ma">
+                【陰陽師四大主角介紹——安倍晴明】<br> 作為平安時代陰陽師中的佼佼者，
+                <br> 天賦異稟的安倍晴明與眾多強力式神締結了契約。
+                <br> 然而現在的他似乎丟失了過去的記憶，
+                <br> 即便如此，他依然用心守護著眼前的人們和他的都城。
+                <br>
+            </h4>
         </div>
     </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-6 col-12">
-                <img src="15036165_390385701351984_2951399274854502774_n.jpg">
-            </div>
-            <div class="col-sm-6 col-12">
-                <p class="ma">
-                    【陰陽師四大主角介紹——源博雅】<br> 擁有皇室血統的貴族青年，
-                    <br> 擅長弓術與結界之術。
-                    <br> 成為勇猛的武士是他的畢生追求。
-                    <br> 踏遍兇險只為尋找某個重要的人。
-                    <br>
-                </p>
-            </div>
+    <br>
 
+    <div class="w3-row ">
+        <div class="w3-half w3-container  ">
+            <img src="/img/15094233_389702681420286_8208973383465953030_n.jpg">
+        </div>
+        <div class="w3-half w3-container">
+            <h4 class="ma">
+                【陰陽師四大主角介紹——神樂】<br> 善良而沉默的神秘少女，
+                <br> 失去記憶後便跟隨在晴明身邊。
+                <br> 擁有敏銳的直覺和強大的通靈能力，
+                <br> 還有不為人知的過去。
+                <br>
+            </h4>
         </div>
     </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-6 col-12">
-                <img src="15109569_392208461169708_8420525011035158890_n.jpg">
-            </div>
-            <div class="col-sm-6 col-12">
-                <p class="ma">
-                    【陰陽師四大主角介紹——八百比丘尼】<br> 因誤食人魚肉而長生不老的占卜師，
-                    <br> 在命運的指引下，於鳳凰林中久久等待。
-                    <br> 占卜之夢預言的人如期而至，
-                    <br> 這場冒險的相遇是否會打破命運？
-                    <br>
-                </p>
-            </div>
+    <br>
 
+    <div class="w3-row ">
+        <div class="w3-half w3-container  ">
+            <img src="/img/15036165_390385701351984_2951399274854502774_n.jpg">
+        </div>
+        <div class="w3-half w3-container">
+
+            <h4 class="ma">
+                【陰陽師四大主角介紹——源博雅】<br> 擁有皇室血統的貴族青年，
+                <br> 擅長弓術與結界之術。
+                <br> 成為勇猛的武士是他的畢生追求。
+                <br> 踏遍兇險只為尋找某個重要的人。
+                <br>
+            </h4>
         </div>
     </div>
+
+    <br>
+
+    <div class="w3-row ">
+        <div class="w3-half w3-container  ">
+            <img src="/img/15109569_392208461169708_8420525011035158890_n.jpg">
+        </div>
+        <div class="w3-half w3-container">
+            <h4 class="ma">
+                【陰陽師四大主角介紹——八百比丘尼】<br> 因誤食人魚肉而長生不老的占卜師，
+                <br> 在命運的指引下，於鳳凰林中久久等待。
+                <br> 占卜之夢預言的人如期而至，
+                <br> 這場冒險的相遇是否會打破命運？
+                <br>
+            </h4>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-container w3-theme-dark w3-padding-16">
+        <p></p>
+        <div style="position:relative;bottom:55px;" class="w3-tooltip w3-right">
+            <span class="w3-text w3-theme-light w3-padding">Go To Top</span>
+            <a class="w3-text-white" href="#myHeader"><span class="w3-xlarge">
+    <i class="fa fa-chevron-circle-up"></i></span></a>
+        </div>
+    </footer>
+
+    <!-- Script for Sidebar, Tabs, Accordions, Progress bars and slideshows -->
+    <script>
+        // Side navigation
+        function w3_open() {
+            var x = document.getElementById("mySidebar");
+            x.style.width = "100%";
+            x.style.fontSize = "40px";
+            x.style.paddingTop = "10%";
+            x.style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+        }
+
+        // Tabs
+        function openCity(evt, cityName) {
+            var i;
+            var x = document.getElementsByClassName("city");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            var activebtn = document.getElementsByClassName("testbtn");
+            for (i = 0; i < x.length; i++) {
+                activebtn[i].className = activebtn[i].className.replace(" w3-dark-grey", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " w3-dark-grey";
+        }
+
+        var mybtn = document.getElementsByClassName("testbtn")[0];
+        mybtn.click();
+
+        // Accordions
+        function myAccFunc(id) {
+            var x = document.getElementById(id);
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+
+        // Slideshows
+        var slideIndex = 1;
+
+        function plusDivs(n) {
+            slideIndex = slideIndex + n;
+            showDivs(slideIndex);
+        }
+
+        function showDivs(n) {
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = x.length
+            };
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+
+        showDivs(1);
+
+        // Progress Bars
+        function move() {
+            var elem = document.getElementById("myBar");
+            var width = 5;
+            var id = setInterval(frame, 10);
+
+            function frame() {
+                if (width == 100) {
+                    clearInterval(id);
+                } else {
+                    width++;
+                    elem.style.width = width + '%';
+                    elem.innerHTML = width * 1 + '%';
+                }
+            }
+        }
+    </script>
 
 </body>
 
